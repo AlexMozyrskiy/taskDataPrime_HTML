@@ -1,0 +1,15 @@
+@import './libs/normalize';
+@import './libs/fonts';
+
+@import './base/variables';
+
+@import './modules/page-wrapper.scss';
+@import './modules/task';
+
+.displaynone {
+    display: none;
+}
+
+* {
+    font-size: 35px;
+}

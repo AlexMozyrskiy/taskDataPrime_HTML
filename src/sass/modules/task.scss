@@ -1,0 +1,122 @@
+.task {
+    position: relative;
+    display: flex;
+    // align-items: center;
+    border-radius: 30px;
+    height: 100px;
+    width: 1045px;
+    overflow: hidden;
+    transition: 0.5s;
+
+    &__notActiveTask {
+        background-color: $notActiveTexareaBackgroundColor;
+    }
+
+    &__activeTask {
+        background-color: $activeTexareaBackgroundColor;
+    }
+    
+    &__rhombus {
+        position: absolute;
+        left: -80px;
+        background-color: $mainBackgroundColor;
+        top: 30px;
+        width: $squareWidth;
+        height: $squareWidth;
+        transform: rotate(-45deg);
+
+        &-active {
+            animation: rhombus 0.5s ease-out;
+        }
+    }
+
+    @keyframes rhombus {
+        from {
+            left: -80px;
+        }
+
+        50% {
+            left: -20px;
+        }
+
+        to {
+            left: -80px;
+        }
+    }
+
+    &__square {
+        position: absolute;
+        background-color: $squareBackgroundColor;
+        top: 30px;
+        width: $squareWidth;
+        height: $squareWidth;
+        border-radius: 10px;
+    }
+
+    &__notActiveSquare {
+        left: -40px;
+        transition: 0.5s;
+    }
+
+    &__activeSquare {
+        left: 40px;
+        transition: 0.5s;
+    }
+
+    &__textarea {
+        border: none;
+        outline: none;
+        width: 70%;
+        resize: none;
+        // justify-content: center;
+        height: 40px;
+        margin-top: 30px;
+        padding-left: 30px;
+    }
+
+    &__activeTextarea {
+        background-color: $activeTexareaBackgroundColor;
+        margin-left: 60px;
+        transition: 0.5s;
+    }
+
+    &__notActiveTextarea {
+        background-color: $notActiveTexareaBackgroundColor;
+        transition: 0.5s;
+    }
+
+    &__calendar-and-select-wrapper {
+        display: flex;
+        // justify-content: flex-end;
+        margin-left: auto;
+        align-items: center;
+
+        select {
+            display: block;
+            border: none;
+            outline: none;
+            height: 60px;
+            width: 215px;
+            background-color: $squareBackgroundColor;
+            margin-right: 20px;
+            border-radius: 15px;
+            padding: 0 40px 0 40px;
+        }
+    }
+
+    &__calendar {
+        width: 60px;
+        height: 60px;
+        background-color: $squareBackgroundColor;
+        margin-right: 20px;
+        border-radius: 15px;
+
+        p {
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+        }
+    }
+
+    
+}
